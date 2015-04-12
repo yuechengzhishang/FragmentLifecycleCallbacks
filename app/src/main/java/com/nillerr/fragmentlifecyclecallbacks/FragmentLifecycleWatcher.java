@@ -12,6 +12,8 @@ import java.util.Set;
 
 public class FragmentLifecycleWatcher implements Runnable {
 
+    private static final long SLEEP_INTERVAL = 500;
+
     private final Object mActivitySyncRoot = new Object();
 
     private Activity mActivity;
@@ -138,7 +140,7 @@ public class FragmentLifecycleWatcher implements Runnable {
             }
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(SLEEP_INTERVAL);
             } catch (InterruptedException ignored) {
             }
         }

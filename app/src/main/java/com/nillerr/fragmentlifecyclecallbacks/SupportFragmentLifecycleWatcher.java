@@ -8,6 +8,8 @@ import java.util.List;
 
 public class SupportFragmentLifecycleWatcher implements Runnable {
 
+    private static final long SLEEP_INTERVAL = 500;
+
     private final Object mActivitySyncRoot = new Object();
 
     private ActionBarActivity mActivity;
@@ -70,7 +72,7 @@ public class SupportFragmentLifecycleWatcher implements Runnable {
             }
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(SLEEP_INTERVAL);
             } catch (InterruptedException ignored) {
             }
         }
