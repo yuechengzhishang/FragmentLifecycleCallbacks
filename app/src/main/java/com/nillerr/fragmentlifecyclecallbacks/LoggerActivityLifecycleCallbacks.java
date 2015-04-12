@@ -18,25 +18,25 @@ public class LoggerActivityLifecycleCallbacks implements Application.ActivityLif
     private final FragmentLifecycleCallbacks mFragmentCallbacks = new FragmentLifecycleCallbacks() {
         @Override
         public void onAdded(Fragment fragment) {
-            Log.e(TAG, "onAdded: " + fragment);
+            Log.e(TAG, "onFragmentAdded: " + fragment);
         }
 
         @Override
         public void onRemoved(Fragment fragment) {
-            Log.e(TAG, "onRemoved: " + fragment);
+            Log.e(TAG, "onFragmentRemoved: " + fragment);
         }
     };
 
     private Map<Activity, SupportFragmentLifecycleWatcher> mSupportWatchers = new HashMap<Activity, SupportFragmentLifecycleWatcher>();
     private final SupportFragmentLifecycleCallbacks mSupportFragmentCallbacks = new SupportFragmentLifecycleCallbacks() {
         @Override
-        public void onAdded(android.support.v4.app.Fragment fragment) {
-            Log.e(TAG, "onAdded: " + fragment);
+        public void onFragmentAdded(android.support.v4.app.Fragment fragment) {
+            Log.e(TAG, "onFragmentAdded: " + fragment);
         }
 
         @Override
-        public void onRemoved(android.support.v4.app.Fragment fragment) {
-            Log.e(TAG, "onRemoved: " + fragment);
+        public void onFragmentRemoved(android.support.v4.app.Fragment fragment) {
+            Log.e(TAG, "onFragmentRemoved: " + fragment);
         }
     };
 

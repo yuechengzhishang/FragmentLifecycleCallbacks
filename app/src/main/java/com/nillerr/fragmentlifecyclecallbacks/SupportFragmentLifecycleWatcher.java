@@ -58,13 +58,13 @@ public class SupportFragmentLifecycleWatcher implements Runnable {
                 List<Fragment> fragments = findFragments(mActivity);
                 for (Fragment fragment : fragments) {
                     if (!mFragmentsInLastPass.contains(fragment)) {
-                        mCallbacks.onAdded(fragment);
+                        mCallbacks.onFragmentAdded(fragment);
                     }
                 }
 
                 for (Fragment fragment : mFragmentsInLastPass) {
                     if (!fragments.contains(fragment)) {
-                        mCallbacks.onRemoved(fragment);
+                        mCallbacks.onFragmentRemoved(fragment);
                     }
                 }
 

@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 
 public interface SupportFragmentLifecycleCallbacks {
 
-    void onAdded(Fragment fragment);
+    void onFragmentAdded(Fragment fragment);
 
-    void onRemoved(Fragment fragment);
+    void onFragmentRemoved(Fragment fragment);
 
 }
